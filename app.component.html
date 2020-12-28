@@ -1,0 +1,528 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav mode="side" #sidenav opened position="start">
+    
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a mat-button routerLink="/signin" routerLinkActive="active"> Login </a>
+      <a mat-button routerLink="/register" routerLinkActive="active"> Register </a>
+      <a mat-button routerLink="/home" routerLinkActive="active"> Home</a>
+      <a mat-button routerLink="/dynamic" routerLinkActive="active"> Dynamic</a>
+      <a mat-button routerLink="/crud" routerLinkActive="active"> Crud</a>
+      <!--<a mat-button routerLink="/callpromise" routerLinkActive="active"> Promise </a>
+      -->
+      <a mat-button routerLink="/replay-subject" routerLinkActive="active"> Replay Subject </a>
+      <a mat-button routerLink="/star-rating" routerLinkActive="active"> Rating </a>
+      <a mat-button routerLink="/interceptor" routerLinkActive="active"> Intercept </a>
+    </mat-toolbar>
+
+<router-outlet></router-outlet>
+</mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!--<app-dialog></app-dialog>
+
+<nav>
+  <a routerLink="/register" routerLinkActive="action">Register</a>
+  <br/>
+  <a routerLink="/signin" routerLinkActive="action">Login</a>
+  <br/>
+
+
+<a routerLink ="/gppd" routerLinkActive="action">Http Requests</a>
+<br/>
+<a routerLink ="/callpromise" routerLinkActive="action">Promise</a>
+<br/>
+<a routerLink ="/intercept" routerLinkActive="action">Intercept</a>
+</nav>
+<p appCustomdirective> Welcome to App Page</p>
+
+<ng-container *ngComponentOutlet="say"></ng-container>
+<button matInput mat-raised-button color="warn" class="btn btn-primary" (click)="sayHi()" > Hi</button> 
+<button matInput mat-raised-button color="primary" class="btn btn-success" (click)="sayHello()" >Welcome</button> 
+<button matInput mat-raised-button color="accent" class="btn btn-danger" (click)="sayGoodbye()" >Thanks</button> 
+-->
+
+
+
+<!-- <h1>Lazy Loading</h1>
+
+<button (click)="register()">Load Register</button>
+<button (click)="signin()">Load Login</button>
+-->
+
+<!--
+<button mat-button (click)="openDialog()">Open Dialog</button>
+<div mat-dialog-content>Welcome</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<app-register></app-register>
+<app-signin></app-signin>
+-->
+
+
+<!--<mat-toolbar color="primary">
+  <div> Navigation</div>
+  <div>
+    <span>Signin</span>
+    <span>Login</span>
+  </div>
+</mat-toolbar>
+-->
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<div class="login-page" fxLayoutAlign="center center" fxFlexFill >
+  <mat-card fxFlex="30">
+    <mat-card-title style="text-align:center;">Login/SignUp</mat-card-title>
+    <mat-tab-group mat-stretch-tabs>
+      <mat-tab label="Login">
+          <mat-card-content> -->
+           <!-- <form action="" fxLayoutAlign="stretch" fxLayout="column">-->
+        <!--      <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="registerForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Email"
+                  id="email"
+                  formControlName="email"
+                 [(ngModel)]="email" [FormControl]="email" required >
+                  <mat-error *ngIf="email.invalid">Email is required</mat-error>
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Password"
+                  type="password"
+                  required
+                  minlength="6"
+                  name="password"
+                  ngModel
+                  #password="ngModel">
+                  <mat-error
+                    *ngIf="password.errors && password.errors.required">
+                    Password is required
+                  </mat-error>
+
+                  <mat-error
+                    *ngIf="password.errors && password.errors.minlength">
+                    Password must be of length 6
+                  </mat-error>
+                <mat-icon matSuffix>lock</mat-icon>
+              </mat-form-field>
+
+              <button
+                mat-raised-button
+                color="primary"
+                class="login-button">
+                Login
+              </button>
+
+            </form>
+          </mat-card-content>
+      </mat-tab>
+
+      <mat-tab label="Sign Up">
+        <mat-card-content>
+          <form action="" fxLayoutAlign="stretch" fxLayout="column">
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="User Name"
+                required
+                name="username"
+                ngModel
+                #username="ngModel">
+              <mat-icon matSuffix>perm_identity</mat-icon>
+              <mat-error
+                *ngIf="username.invalid">
+                Username is required
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Email"
+                required
+                name="email"
+                ngModel
+                #email="ngModel">
+                <mat-error *ngIf="email.invalid">Email is required</mat-error>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Password"
+                type="password"
+                required
+                minlength="6"
+                name="password"
+                ngModel
+                #password="ngModel">
+                <mat-error
+                  *ngIf="password.errors && password.errors.required">
+                  Password is required
+                </mat-error>
+                <mat-error
+                  *ngIf="password.errors && password.errors.minlength">
+                  Password must be of length 6
+                </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                matInput
+                placeholder="Confirm Password"
+                type="password"
+                required
+                minlength="6"
+                name="repassword"
+                ngModel
+                #repassword="ngModel">
+                <mat-error
+                  *ngIf="repassword.errors && repassword.errors.required">
+                  Re-Enter Password is required
+                </mat-error>
+            <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Phone Number"
+                required
+                name="phone"
+                ngModel
+                #phone="ngModel">
+                <mat-error *ngIf="phone.invalid">Phone Number is required</mat-error>
+              <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker" placeholder="Date of birth" name="dob" required
+              ngModel
+              #dob="ngModel">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-error
+              *ngIf="dob.errors && dob.errors.required">
+              Date of birth is required
+            </mat-error>
+           </mat-form-field>
+
+          -->
+
+         <!--  <mat-form-field class="example-full-width">
+            <mat-label>Country</mat-label>
+            <mat-select name="mymodel" (ngModelChange)="onChangeCountry($event)" [ngModel]="mymodel">
+              <mat-option *ngFor="let country of countryInfo; let i = index" value="{{i}}">{{country.CountryName}}
+              </mat-option>
+            </mat-select>
+            </mat-form-field>
+          
+
+          <mat-form-field class="example-full-width">
+            <mat-label>State</mat-label>
+            <mat-select name="mymodel1" (ngModelChange)="onChangeState($event)" [ngModel]="mymodel1">
+            <mat-option *ngFor="let state of stateInfo; let j = index" value="{{j}}">
+                {{state.StateName}}</mat-option>
+            </mat-select>
+           </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>City</mat-label>
+            <mat-select>
+            <mat-option *ngFor="let city of cityInfo; let k = index" value="{{k}}">
+                {{city}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        -->
+
+
+   <!--      <button mat-raised-button
+           color="primary"
+           class="login-button">Sign Up
+         </button>
+  
+       </form>
+     </mat-card-content>
+   </mat-tab>
+ </mat-tab-group>
+</mat-card>
+</div>
+-->
+
+
+
+<!--<app-login [data]="message"></app-login> -->
+
+
+<!--<mat-sidenav-container fullscreen>
+</mat-sidenav class="side-nav" mode="side" opened position="start">
+
+<div class="container" style="font-size:24px";>
+<span>Side Navigation</span>
+</div>
+
+<hr>
+<div class="side-nav-link">
+  <mat-nav-list class="mat-list">
+
+
+    <mat-list-item class="mat-item-hover">
+    <mat-icon>dashboard</mat-icon>home
+    </mat-list-item>
+
+    <mat-list-item class="mat-item-hover">
+      <mat-icon>dashboard</mat-icon>home
+      </mat-list-item>
+
+      <mat-list-item class="mat-item-hover">
+        <mat-icon>dashboard</mat-icon>home
+        </mat-list-item>
+
+  </mat-nav-list>
+</mat-sidenav-container>
+</div>
+-->
+
+
+<!--<div class="login-page" fxLayoutAlign="center center" fxFlexFill >
+  <mat-card fxFlex="30" class="mat-elevation-z12">
+    <mat-card-title style="text-align:center;">SignIn/SignUp</mat-card-title>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+      <mat-tab label="Sign In">
+          <mat-card-content>
+            <form action="" fxLayoutAlign="stretch" fxLayout="column">
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Email"
+                  required
+                  name="email"
+                  ngModel
+                  #email="ngModel">
+                  <mat-error *ngIf="email.invalid">Email is required</mat-error>
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Password"
+                  type="password"
+                  required
+                  minlength="6"
+                  name="password"
+                  ngModel
+                  #password="ngModel">
+                  <mat-error
+                    *ngIf="password.errors && password.errors.required">
+                    Password is required
+                  </mat-error>
+
+                  <mat-error
+                    *ngIf="password.errors && password.errors.minlength">
+                    Password must be of length 6
+                  </mat-error>
+                <mat-icon matSuffix>lock</mat-icon>
+              </mat-form-field>
+
+              <mat-checkbox>Remember Me!</mat-checkbox>
+              <button
+                mat-raised-button
+                color="primary"
+                class="login-button">
+                Sign In
+              </button>
+
+              <button
+                mat-raised-button
+                class="login-button">
+                Login with Google
+              </button>
+            </form>
+          </mat-card-content>
+      </mat-tab>
+
+      <mat-tab label="Sign Up">
+        <mat-card-content>
+          <form action="" fxLayoutAlign="stretch" fxLayout="column">
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="User Name"
+                required
+                name="username"
+                ngModel
+                #username="ngModel">
+              <mat-icon matSuffix>perm_identity</mat-icon>
+              <mat-error
+                *ngIf="username.invalid">
+                Username is required
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Email"
+                required
+                name="email"
+                ngModel
+                #email="ngModel">
+                <mat-error *ngIf="email.invalid">Email is required</mat-error>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Password"
+                type="password"
+                required
+                minlength="6"
+                name="password"
+                ngModel
+                #password="ngModel">
+                <mat-error
+                  *ngIf="password.errors && password.errors.required">
+                  Password is required
+                </mat-error>
+                <mat-error
+                  *ngIf="password.errors && password.errors.minlength">
+                  Password must be of length 6
+                </mat-error>
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input
+                matInput
+                placeholder="Confirm Password"
+                type="password"
+                required
+                minlength="6"
+                name="repassword"
+                ngModel
+                #repassword="ngModel">
+                <mat-error
+                  *ngIf="repassword.errors && repassword.errors.required">
+                  Re-Enter Password is required
+                </mat-error>
+            <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker" placeholder="Date of birth" name="dob" required
+              ngModel
+              #dob="ngModel">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-error
+              *ngIf="dob.errors && dob.errors.required">
+              Date of birth is required
+            </mat-error>
+           </mat-form-field>
+
+        <mat-form-fieldclass="example-full-width">
+        <mat-label>Country</mat-label>
+        <mat-select name="mymodel"(ngModelChange)="onChangeCountry($event)"[ngModel]="mymodel">
+        <mat-option *ngFor="let country of countryInfo; let i = index value="{​​​​​​​​{​​​​​​​​i}​​​​​​​​}​​​​​​​​>{​​​​​​​​{​​​​​​​​country.CountryName}​​​​​​​​}​​​​​​​​
+        </mat-option>
+       </mat-select>
+
+</mat-form-field>
+<br>
+<mat-form-field class="example-full-width">
+<mat-label>State</mat-label>
+<mat-select name="mymodel1"(ngModelChange)="onChangeState($event)"[ngModel]="mymodel1">
+
+<mat-option *ngFor="let state of stateInfo; let j = index value="{​​​​​​​​{​​​​​​​​j}​​​​​​​​}​​​​​​​​>
+                {​​​​​​​​{​​​​​​​​state.StateName}​​​​​​​​}​​​​​​​​</mat-option>
+</mat-select>
+
+</mat-form-field>
+<br>
+<mat-form-fieldclass="example-full-width">
+<mat-label>City</mat-label>
+<mat-select>
+
+<mat-option *ngFor="let city of cityInfo; let k = index value="{​​​​​​​​{​​​​​​​​k}​​​​​​​​}​​​​​​​​>
+                {​​​​​​​​{​​​​​​​​city}​​​​​​​​}​​​​​​​​</mat-option>
+</mat-select>
+
+</mat-form-field>
+
+
+
+          
+          <div mat-dialog-content>Sign in successfully</div>
+          <div mat-dialog-actions>
+          <button mat-button mat-dialog-close>Close</button>
+          </div>
+
+          <button mat-button (click)="openDialog()">Launch dialog</button>
+        
+
+            <button
+              mat-raised-button
+              color="primary"
+              class="login-button"
+              (click)="openDialog()">Sign Up
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>
+-->
+ <!-- 38 to 181,210 to 220-->
